@@ -47,7 +47,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/khcrysalis/PlumeImpactor.git",
-                    "commit": "1c0a10f4909da878561020774873d13cd489e02c"
+                    "commit": "b607d8ade24c3a4ba0d18321c8d5b711ac360ba7"
                 },
                 "cargo-sources.json"
             ]
