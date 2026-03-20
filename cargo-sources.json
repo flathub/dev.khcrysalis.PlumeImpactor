@@ -26,8 +26,8 @@
     {
         "type": "git",
         "url": "https://github.com/plumeimpactor/omnisette",
-        "commit": "c066ac2bba09d01ba74c7d1c518b994298cb871c",
-        "dest": "flatpak-cargo/git/omnisette-c066ac2"
+        "commit": "c5c4cf29a4d0baea632bf50efbc161eb88df57b9",
+        "dest": "flatpak-cargo/git/omnisette-c5c4cf2"
     },
     {
         "type": "archive",
@@ -858,19 +858,6 @@
         "type": "inline",
         "contents": "{\"package\": \"fd307490d624467aa6f74b0eabb77633d1f758a7b25f12bceb0b22e08d9726f6\", \"files\": {}}",
         "dest": "cargo/vendor/base16ct-1.0.0",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "archive",
-        "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/base64/base64-0.13.1.crate",
-        "sha256": "9e1b586273c5702936fe7b7d6896644d8be71e6314cfe09d3167c95f712589e8",
-        "dest": "cargo/vendor/base64-0.13.1"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": \"9e1b586273c5702936fe7b7d6896644d8be71e6314cfe09d3167c95f712589e8\", \"files\": {}}",
-        "dest": "cargo/vendor/base64-0.13.1",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -5987,7 +5974,7 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/omnisette-c066ac2/omnisette\" \"cargo/vendor/omnisette\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/omnisette-c5c4cf2/omnisette\" \"cargo/vendor/omnisette\""
         ]
     },
     {
@@ -6325,19 +6312,6 @@
         "type": "inline",
         "contents": "{\"package\": \"4bab5b985dc082b345f812b7df84e1bef27e7207b39e448439ba8bd69c93f147\", \"files\": {}}",
         "dest": "cargo/vendor/pear_codegen-0.2.9",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "archive",
-        "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/pem/pem-1.1.1.crate",
-        "sha256": "a8835c273a76a90455d7344889b0964598e3316e2a79ede8e36f16bdcf2228b8",
-        "dest": "cargo/vendor/pem-1.1.1"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": \"a8835c273a76a90455d7344889b0964598e3316e2a79ede8e36f16bdcf2228b8\", \"files\": {}}",
-        "dest": "cargo/vendor/pem-1.1.1",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -7123,14 +7097,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/rcgen/rcgen-0.9.3.crate",
-        "sha256": "6413f3de1edee53342e6138e75b56d32e7bc6e332b3bd62d497b1929d4cfbcdd",
-        "dest": "cargo/vendor/rcgen-0.9.3"
+        "url": "https://static.crates.io/crates/rcgen/rcgen-0.12.1.crate",
+        "sha256": "48406db8ac1f3cbc7dcdb56ec355343817958a356ff430259bb07baf7607e1e1",
+        "dest": "cargo/vendor/rcgen-0.12.1"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"6413f3de1edee53342e6138e75b56d32e7bc6e332b3bd62d497b1929d4cfbcdd\", \"files\": {}}",
-        "dest": "cargo/vendor/rcgen-0.9.3",
+        "contents": "{\"package\": \"48406db8ac1f3cbc7dcdb56ec355343817958a356ff430259bb07baf7607e1e1\", \"files\": {}}",
+        "dest": "cargo/vendor/rcgen-0.12.1",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -7313,19 +7287,6 @@
         "type": "inline",
         "contents": "{\"package\": \"a15ad77d9e70a92437d8f74c35d99b4e4691128df018833e99f90bcd36152672\", \"files\": {}}",
         "dest": "cargo/vendor/rfd-0.16.0",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "archive",
-        "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/ring/ring-0.16.20.crate",
-        "sha256": "3053cf52e236a3ed746dfc745aa9cacf1b791d846bdaf412f60a8d7d6e17c8fc",
-        "dest": "cargo/vendor/ring-0.16.20"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": \"3053cf52e236a3ed746dfc745aa9cacf1b791d846bdaf412f60a8d7d6e17c8fc\", \"files\": {}}",
-        "dest": "cargo/vendor/ring-0.16.20",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -8275,19 +8236,6 @@
         "type": "inline",
         "contents": "{\"package\": \"c5482afe85a0b6ce956c945401598dbc527593c77ba51d0a87a586938b1b893a\", \"files\": {}}",
         "dest": "cargo/vendor/spake2-0.4.0",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "archive",
-        "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/spin/spin-0.5.2.crate",
-        "sha256": "6e63cff320ae2c57904679ba7cb63280a3dc4613885beafb148ee7bf9aa9042d",
-        "dest": "cargo/vendor/spin-0.5.2"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": \"6e63cff320ae2c57904679ba7cb63280a3dc4613885beafb148ee7bf9aa9042d\", \"files\": {}}",
-        "dest": "cargo/vendor/spin-0.5.2",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -9398,19 +9346,6 @@
         "type": "inline",
         "contents": "{\"package\": \"673aac59facbab8a9007c7f6108d11f63b603f7cabff99fabf650fea5c32b861\", \"files\": {}}",
         "dest": "cargo/vendor/unsafe-libyaml-0.2.11",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "archive",
-        "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/untrusted/untrusted-0.7.1.crate",
-        "sha256": "a156c684c91ea7d62626509bce3cb4e1d9ed5c4d978f7b4352658f96a4c26b4a",
-        "dest": "cargo/vendor/untrusted-0.7.1"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": \"a156c684c91ea7d62626509bce3cb4e1d9ed5c4d978f7b4352658f96a4c26b4a\", \"files\": {}}",
-        "dest": "cargo/vendor/untrusted-0.7.1",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -11846,7 +11781,7 @@
     },
     {
         "type": "inline",
-        "contents": "[source.vendored-sources]\ndirectory = \"cargo/vendor\"\n\n[source.crates-io]\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/dadoum/android-loader\"]\ngit = \"https://github.com/dadoum/android-loader\"\nreplace-with = \"vendored-sources\"\nbranch = \"bigger_pages\"\n\n[source.\"https://github.com/plumeimpactor/plume-apple-platform-rs\"]\ngit = \"https://github.com/plumeimpactor/plume-apple-platform-rs\"\nreplace-with = \"vendored-sources\"\nrev = \"428b42f\"\n\n[source.\"https://github.com/plumeimpactor/decompress\"]\ngit = \"https://github.com/plumeimpactor/decompress\"\nreplace-with = \"vendored-sources\"\nrev = \"75a3016\"\n\n[source.\"https://github.com/plumeimpactor/plume-idevice\"]\ngit = \"https://github.com/plumeimpactor/plume-idevice\"\nreplace-with = \"vendored-sources\"\nrev = \"5e350a\"\n\n[source.\"https://github.com/plumeimpactor/omnisette\"]\ngit = \"https://github.com/plumeimpactor/omnisette\"\nreplace-with = \"vendored-sources\"\nrev = \"c066ac2\"\n",
+        "contents": "[source.vendored-sources]\ndirectory = \"cargo/vendor\"\n\n[source.crates-io]\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/dadoum/android-loader\"]\ngit = \"https://github.com/dadoum/android-loader\"\nreplace-with = \"vendored-sources\"\nbranch = \"bigger_pages\"\n\n[source.\"https://github.com/plumeimpactor/plume-apple-platform-rs\"]\ngit = \"https://github.com/plumeimpactor/plume-apple-platform-rs\"\nreplace-with = \"vendored-sources\"\nrev = \"428b42f\"\n\n[source.\"https://github.com/plumeimpactor/decompress\"]\ngit = \"https://github.com/plumeimpactor/decompress\"\nreplace-with = \"vendored-sources\"\nrev = \"75a3016\"\n\n[source.\"https://github.com/plumeimpactor/plume-idevice\"]\ngit = \"https://github.com/plumeimpactor/plume-idevice\"\nreplace-with = \"vendored-sources\"\nrev = \"5e350a\"\n\n[source.\"https://github.com/plumeimpactor/omnisette\"]\ngit = \"https://github.com/plumeimpactor/omnisette\"\nreplace-with = \"vendored-sources\"\nrev = \"c5c4cf2\"\n",
         "dest": "cargo",
         "dest-filename": "config"
     }
