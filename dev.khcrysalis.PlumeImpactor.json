@@ -15,16 +15,8 @@
         "--talk-name=org.kde.StatusNotifierWatcher"
     ],
     "cleanup": [
-        "/include",
-        "/lib/pkgconfig",
-        "/share/pkgconfig",
-        "/share/aclocal",
-        "/share/doc",
-        "/share/man",
-        "/share/vala",
-        "/share/gtk-doc",
-        "/share/libayatana-indicator",
-        "/share/libdbusmenu"
+        "/lib/girepository-1.0",
+        "/share/gir-1.0"
     ],
     "modules": [
         "shared-modules/libayatana-appindicator/libayatana-appindicator-gtk3.json",
