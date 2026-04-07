@@ -47,7 +47,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/claration/Impactor.git",
-                    "commit": "663c5e06f73c76a69392cd02a74421636af57e24"
+                    "commit": "5d7ec02956edce335252861e1881e3e9ee203851"
                 },
                 "cargo-sources.json"
             ]
