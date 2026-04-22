@@ -3,7 +3,9 @@
     "runtime": "org.freedesktop.Platform",
     "runtime-version": "25.08",
     "sdk": "org.freedesktop.Sdk",
-    "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
+    "sdk-extensions": [
+        "org.freedesktop.Sdk.Extension.rust-stable"
+    ],
     "command": "plumeimpactor",
     "finish-args": [
         "--share=network",
@@ -62,7 +64,8 @@
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^v([\\d\\.]+)$"
-                    }
+                    },
+                    "commit": "6451366629682a9c8a1530f20867bf452bfb4e61"
                 },
                 "cargo-sources.json"
             ]
