@@ -2,7 +2,7 @@ name: Generate cargo-sources.json
 
 on:
   pull_request:
-  workflow_dispatch:
+    
 
 permissions:
   contents: write
@@ -23,8 +23,7 @@ jobs:
       - name: Clone Impactor (upstream main)
         run: |
           git clone https://github.com/flatpak/flatpak-builder-tools.git
-          git clone --depth 1 https://github.com/claration/Impactor.git app
-          cd app
+          git clone --depth 1 https://github.com/claration/Impactor.git
 
       - name: Install generator deps
         working-directory: flatpak-builder-tools/cargo
@@ -35,7 +34,7 @@ jobs:
         working-directory: flatpak-builder-tools/cargo
         run: |
           poetry run python3 flatpak-cargo-generator.py \
-            $GITHUB_WORKSPACE/Cargo.toml \
+            ../../Impactor/Cargo.toml \
             -o $GITHUB_WORKSPACE/cargo-sources.json
 
       - name: Commit changes
