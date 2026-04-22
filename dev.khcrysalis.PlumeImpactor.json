@@ -47,12 +47,12 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://github.com/CLARATION/Impactor/releases/download/v2.2.3/cargo-sources.json",
-                    "sha256": "acd8b98905d0034359d4fed2cc22bdcfc6c937d57cdba093b99b8b0dc7719edf",
+                    "url": "https://github.com/CLARATION/Impactor/releases/download/v2.2.3/dev.khcrysalis.PlumeImpactor.metainfo.xml",
+                    "sha256": "ea2411a1fe296bcf4f6fb595634d48f7a7875e33e82d4ce6f674fb37d5d67c10",
                     "x-checker-data": {
                         "type": "json",
                         "url": "https://api.github.com/repos/CLARATION/Impactor/releases/latest",
-                        "url-query": ".assets[] | select(.name == \"cargo-sources.json\") | .browser_download_url"
+                        "url-query": ".assets[] | select(.name == \"dev.khcrysalis.PlumeImpactor.metainfo.xml\") | .browser_download_url"
                     }
                 },
                 {
