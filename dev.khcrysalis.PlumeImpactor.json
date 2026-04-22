@@ -16,18 +16,6 @@
         "--filesystem=/run/usbmuxd",
         "--talk-name=org.kde.StatusNotifierWatcher"
     ],
-    "cleanup": [
-        "/include",
-        "/lib/pkgconfig",
-        "/share/pkgconfig",
-        "/share/aclocal",
-        "/share/doc",
-        "/share/man",
-        "/share/vala",
-        "/share/gtk-doc",
-        "/share/libayatana-indicator",
-        "/share/libdbusmenu"
-    ],
     "modules": [
         "shared-modules/libayatana-appindicator/libayatana-appindicator-gtk3.json",
         {
