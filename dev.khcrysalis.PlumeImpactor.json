@@ -60,12 +60,12 @@
                 {
                     "type": "git",
                     "url": "https://github.com/claration/Impactor.git",
-                    "tag": "v2.2.3",
+                    "tag": "v2.3.0",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^v([\\d\\.]+)$"
                     },
-                    "commit": "6451366629682a9c8a1530f20867bf452bfb4e61"
+                    "commit": "8ad531a6fe2ad99eea6eb412c79707b2cf55e81f"
                 },
                 "cargo-sources.json"
             ]
