@@ -1,0 +1,49 @@
+name: Generate cargo-sources.json
+
+on:
+  pull_request:
+    
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  generate:
+    if: contains(github.event.pull_request.title, 'module')
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y python3 git pipx
+          pipx ensurepath
+          pipx install poetry
+
+      - name: Clone Builder Tools
+        run: |
+          git clone https://github.com/flatpak/flatpak-builder-tools.git
+
+      - name: Install generator deps
+        working-directory: flatpak-builder-tools/cargo
+        run: |
+          poetry install
+
+      - name: Generate cargo-sources.json
+        working-directory: flatpak-builder-tools/cargo
+        run: |
+          git clone --depth 1 https://github.com/claration/Impactor.git
+          poetry run python3 flatpak-cargo-generator.py \
+            Impactor/Cargo.lock \
+            -o $GITHUB_WORKSPACE/cargo-sources.json
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add cargo-sources.json
+
+          git commit -m "Update cargo-sources.json"
+          git push

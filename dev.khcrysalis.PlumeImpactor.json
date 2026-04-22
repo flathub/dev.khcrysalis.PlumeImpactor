@@ -34,7 +34,8 @@
             "build-commands": [
                 "cargo --offline fetch --manifest-path Cargo.toml",
                 "cargo --offline build --release --bins --workspace",
-                "make install PREFIX=/app PROFILE=release"
+                "make install PREFIX=/app PROFILE=release",
+                "install -D dev.khcrysalis.PlumeImpactor.metainfo.xml -t /app/share/metainfo"
             ],
             "build-options": {
                 "append-path": "/usr/lib/sdk/rust-stable/bin",
@@ -45,9 +46,23 @@
             },
             "sources": [
                 {
+                    "type": "file",
+                    "url": "https://github.com/CLARATION/Impactor/releases/download/v2.2.3/dev.khcrysalis.PlumeImpactor.metainfo.xml",
+                    "sha256": "ea2411a1fe296bcf4f6fb595634d48f7a7875e33e82d4ce6f674fb37d5d67c10",
+                    "x-checker-data": {
+                        "type": "json",
+                        "url": "https://api.github.com/repos/CLARATION/Impactor/releases/latest",
+                        "url-query": ".assets[] | select(.name == \"dev.khcrysalis.PlumeImpactor.metainfo.xml\") | .browser_download_url"
+                    }
+                },
+                {
                     "type": "git",
                     "url": "https://github.com/claration/Impactor.git",
-                    "commit": "1b98375eaf49aec1b076f5c2349ee31f3dadcc6b"
+                    "tag": "v2.2.3",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^v([\\d\\.]+)$"
+                    }
                 },
                 "cargo-sources.json"
             ]
