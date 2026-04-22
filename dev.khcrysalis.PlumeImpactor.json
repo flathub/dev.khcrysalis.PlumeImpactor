@@ -34,7 +34,8 @@
             "build-commands": [
                 "cargo --offline fetch --manifest-path Cargo.toml",
                 "cargo --offline build --release --bins --workspace",
-                "make install PREFIX=/app PROFILE=release"
+                "make install PREFIX=/app PROFILE=release",
+                "install -D dev.khcrysalis.PlumeImpactor.metainfo.xml -t /app/share/metainfo"
             ],
             "build-options": {
                 "append-path": "/usr/lib/sdk/rust-stable/bin",
@@ -47,9 +48,28 @@
                 {
                     "type": "git",
                     "url": "https://github.com/claration/Impactor.git",
-                    "commit": "1b98375eaf49aec1b076f5c2349ee31f3dadcc6b"
+                    "branch": "main"
                 },
-                "cargo-sources.json"
+                {
+                    "type": "file",
+                    "url": "https://github.com/CLARATION/Impactor/releases/download/v2.2.3/dev.khcrysalis.PlumeImpactor.metainfo.xml",
+                    "sha256": "12af4d9829a62815a4c379625677dca9f218e53380e98c17871b5e39552b4145",
+                    "x-checker-data": {
+                        "type": "json",
+                        "url": "https://api.github.com/repos/CLARATION/Impactor/releases/latest",
+                        "url-query": ".assets[] | select(.name == \"dev.khcrysalis.PlumeImpactor.metainfo.xml\") | .browser_download_url"
+                    }
+                },
+                {
+                    "type": "file",
+                    "url": "https://github.com/CLARATION/Impactor/releases/download/v2.2.3/cargo-sources.json",
+                    "sha256": "12af4d9829a62815a4c379625677dca9f218e53380e98c17871b5e39552b4145",
+                    "x-checker-data": {
+                        "type": "json",
+                        "url": "https://api.github.com/repos/CLARATION/Impactor/releases/latest",
+                        "url-query": ".assets[] | select(.name == \"cargo-sources.json\") | .browser_download_url"
+                    }
+                }
             ]
         }
     ]
