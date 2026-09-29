@@ -50,8 +50,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://github.com/claration/Impactor/releases/download/v2.6.3/dev.khcrysalis.PlumeImpactor.metainfo.xml",
-                    "sha256": "a0df6201c17124905b582b05b6506be962535794b60fe4175aa9fd23064941c9",
+                    "url": "https://github.com/claration/impactor/releases/download/v2.6.5/dev.khcrysalis.PlumeImpactor.metainfo.xml",
+                    "sha256": "c59a2dea69cabec69079a7f1b8440377e86c4b28bef78e8494fccec05df358a2",
                     "x-checker-data": {
                         "type": "json",
                         "url": "https://api.github.com/repos/CLARATION/Impactor/releases/latest",
@@ -62,12 +62,12 @@
                 {
                     "type": "git",
                     "url": "https://github.com/claration/Impactor.git",
-                    "tag": "v2.6.3",
+                    "tag": "v2.6.5",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^v([\\d\\.]+)$"
                     },
-                    "commit": "e53e43182998e6717fe81dc6c1f578ac74234130"
+                    "commit": "6244bc3fb2a719ba528da10fa6f736440195356c"
                 },
                 "cargo-sources.json"
             ]
