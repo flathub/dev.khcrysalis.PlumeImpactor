@@ -7,12 +7,6 @@
     },
     {
         "type": "git",
-        "url": "https://github.com/plumeimpactor/plume-apple-platform-rs",
-        "commit": "428b42f059bbf0b17104f9ad448b5dab3ef79f53",
-        "dest": "flatpak-cargo/git/plume-apple-platform-rs-428b42f"
-    },
-    {
-        "type": "git",
         "url": "https://github.com/jkcoxson/idevice",
         "commit": "5171e34e3a236842af1160a84d955d037ddca3af",
         "dest": "flatpak-cargo/git/idevice-5171e34"
@@ -296,75 +290,42 @@
         "dest-filename": ".cargo-checksum.json"
     },
     {
-        "type": "shell",
-        "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/plume-apple-platform-rs-428b42f/apple-bundles\" \"cargo/vendor/apple-bundles\""
-        ]
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/apple-bundles/apple-bundles-0.21.0.crate",
+        "sha256": "c0f40bb8f844cec39fa3aceae717808c2ac3d2b6c474a9dffbeba07a4a945d10",
+        "dest": "cargo/vendor/apple-bundles-0.21.0"
     },
     {
         "type": "inline",
-        "contents": "[package]\nname = \"apple-bundles\"\nversion = \"0.21.0\"\nauthors = [\"Gregory Szorc <gregory.szorc@gmail.com>\"]\nedition = \"2021\"\nrust-version = \"1.81\"\nlicense = \"MPL-2.0\"\ndescription = \"Interface with Apple bundle primitives\"\nkeywords = [\"apple\", \"macos\", \"bundle\", \"appbundle\"]\nhomepage = \"https://github.com/indygreg/apple-platform-rs\"\nrepository = \"https://github.com/indygreg/apple-platform-rs.git\"\nreadme = \"README.md\"\n\n[dependencies]\nanyhow = \"1.0.93\"\nplist = \"1.7.0\"\nsimple-file-manifest = \"0.11.0\"\nwalkdir = \"2.5.0\"\n\n[dev-dependencies]\ntempfile = \"3.14.0\"\n",
-        "dest": "cargo/vendor/apple-bundles",
-        "dest-filename": "Cargo.toml"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": null, \"files\": {}}",
-        "dest": "cargo/vendor/apple-bundles",
+        "contents": "{\"package\": \"c0f40bb8f844cec39fa3aceae717808c2ac3d2b6c474a9dffbeba07a4a945d10\", \"files\": {}}",
+        "dest": "cargo/vendor/apple-bundles-0.21.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
-        "type": "shell",
-        "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/plume-apple-platform-rs-428b42f/apple-codesign\" \"cargo/vendor/apple-codesign\""
-        ]
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/apple-flat-package/apple-flat-package-0.20.0.crate",
+        "sha256": "9c9d5a1fd8af4a376cc33d7e816a13f8ce127d52101f5dbc8061fb595397bea0",
+        "dest": "cargo/vendor/apple-flat-package-0.20.0"
     },
     {
         "type": "inline",
-        "contents": "[package]\nname = \"apple-codesign\"\nversion = \"0.29.0\"\nauthors = [\"Gregory Szorc <gregory.szorc@gmail.com>\"]\nedition = \"2021\"\nrust-version = \"1.81\"\nlicense = \"MPL-2.0\"\ndescription = \"Pure Rust interface to code signing on Apple platforms\"\nkeywords = [\"apple\", \"macos\", \"codesign\"]\nhomepage = \"https://github.com/indygreg/apple-platform-rs\"\nrepository = \"https://github.com/indygreg/apple-platform-rs.git\"\nreadme = \"README.md\"\n\n[[bin]]\nname = \"rcodesign\"\npath = \"src/main.rs\"\n\n[dependencies]\nanyhow = \"1.0.93\"\nbase64 = \"0.22.1\"\nbcder = \"0.7.4\"\nbitflags = \"2.6.0\"\nbytes = \"1.9.0\"\nchrono = \"0.4.38\"\ncryptographic-message-syntax = \"0.27.0\"\ndialoguer = \"0.11.0\"\ndifference = \"2.0.0\"\ndigest = \"0.10.7\"\ndirs = \"5.0.1\"\nenv_logger = \"0.11.5\"\nfiletime = \"0.2.25\"\nglob = \"0.3.1\"\ngoblin = \"0.9.2\"\nhex = \"0.4.3\"\nlog = \"0.4.22\"\nmd-5 = \"0.10.6\"\nnum-traits = \"0.2.19\"\noid-registry = \"0.7.1\"\nonce_cell = \"1.20.2\"\np12 = \"0.6.3\"\npem = \"3.0.4\"\nplist = \"1.7.0\"\nrand = \"0.8.5\"\nrasn = \"0.20.2\"\nrayon = \"1.10.0\"\nregex = \"1.11.1\"\nring = \"0.17.8\"\nrsa = \"0.9.7\"\nscroll = \"0.12.0\"\nsha2 = \"0.10.8\"\nsemver = \"1.0.23\"\nserde_json = \"1.0.133\"\nserde_yaml = \"0.9.34\"\nsimple-file-manifest = \"0.11.0\"\nspake2 = \"0.4.0\"\nsubtle = \"2.6.1\"\ntempfile = \"3.14.0\"\nthiserror = \"2.0.3\"\nwalkdir = \"2.5.0\"\nx509 = \"0.2.0\"\nx509-certificate = \"0.24.0\"\nxml-rs = \"0.8.23\"\nyasna = \"0.5.2\"\nzip_structs = \"0.2.1\"\n\n[dependencies.aws-config]\nversion = \"1.5.10\"\noptional = true\n\n[dependencies.aws-sdk-s3]\nversion = \"1.63.0\"\noptional = true\n\n[dependencies.aws-smithy-http]\nversion = \"0.60.11\"\noptional = true\n\n[dependencies.aws-smithy-types]\nversion = \"1.2.9\"\noptional = true\n\n[dependencies.clap]\nversion = \"4.5.21\"\nfeatures = [\"derive\"]\n\n[dependencies.der]\nversion = \"0.7.9\"\nfeatures = [\"alloc\"]\n\n[dependencies.elliptic-curve]\nversion = \"0.13.8\"\nfeatures = [\"arithmetic\", \"pkcs8\"]\n\n[dependencies.figment]\nversion = \"0.10.19\"\nfeatures = [\"env\", \"toml\"]\n\n[dependencies.minicbor]\nversion = \"0.25.1\"\nfeatures = [\"derive\", \"std\"]\n\n[dependencies.object]\nversion = \"0.36.5\"\nfeatures = [\"write\"]\n\n[dependencies.p256]\nversion = \"0.13.2\"\ndefault-features = false\nfeatures = [\"arithmetic\", \"pkcs8\", \"std\"]\n\n[dependencies.pkcs1]\nversion = \"0.7.5\"\nfeatures = [\"alloc\", \"std\", \"pkcs8\"]\n\n[dependencies.pkcs8]\nversion = \"0.10.2\"\nfeatures = [\"alloc\", \"std\"]\n\n[dependencies.reqwest]\nversion = \"0.12.9\"\ndefault-features = false\nfeatures = [\"blocking\", \"http2\", \"json\", \"rustls-tls-native-roots\"]\n\n[dependencies.serde]\nversion = \"1.0.215\"\nfeatures = [\"derive\"]\n\n[dependencies.signature]\nversion = \"2.2.0\"\nfeatures = [\"std\"]\n\n[dependencies.spki]\nversion = \"0.7.3\"\nfeatures = [\"pem\"]\n\n[dependencies.tokio]\nversion = \"1.41.1\"\nfeatures = [\"rt\"]\n\n[dependencies.tungstenite]\nversion = \"0.24.0\"\nfeatures = [\"rustls-tls-native-roots\"]\n\n[dependencies.uuid]\nversion = \"1.11.0\"\nfeatures = [\"v4\"]\n\n[dependencies.yubikey]\nversion = \"0.8.0\"\noptional = true\nfeatures = [\"untested\"]\n\n[dependencies.zeroize]\nversion = \"1.8.1\"\nfeatures = [\"zeroize_derive\"]\n\n[dependencies.zip]\nversion = \"2.2.1\"\ndefault-features = false\nfeatures = [\"deflate\"]\n\n[dependencies.app-store-connect]\npath = \"../app-store-connect\"\nversion = \"0.7.0\"\noptional = true\n\n[dependencies.apple-bundles]\npath = \"../apple-bundles\"\nversion = \"0.21.0\"\n\n[dependencies.apple-flat-package]\npath = \"../apple-flat-package\"\nversion = \"0.20.0\"\n\n[dependencies.apple-xar]\npath = \"../apple-xar\"\nversion = \"0.20.0\"\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.security-framework]\nversion = \"2.11.1\"\nfeatures = [\"OSX_10_12\"]\n\n[target.\"cfg(target_os = \\\"macos\\\")\".dependencies.security-framework-sys]\nversion = \"2.12.1\"\nfeatures = [\"OSX_10_12\"]\n\n[target.\"cfg(target_os = \\\"windows\\\")\".dependencies.widestring]\nversion = \"1.1.0\"\n\n[target.\"cfg(target_os = \\\"windows\\\")\".dependencies.windows-sys]\nversion = \"0.59.0\"\nfeatures = [\"Win32_Foundation\", \"Win32_Security_Cryptography\"]\n\n[dev-dependencies]\nflate2 = \"1.0.35\"\nindoc = \"2.0.5\"\nsimple-file-manifest = \"0.11.0\"\ntar = \"0.4.43\"\ntrycmd-indygreg-fork = \"0.14.20\"\n\n[dev-dependencies.zip]\nversion = \"2.2.1\"\ndefault-features = false\n\n[features]\ndefault = [\"notarize\"]\nnotarize = [\"app-store-connect\", \"aws-config\", \"aws-sdk-s3\", \"aws-smithy-http\", \"aws-smithy-types\"]\nsmartcard = [\"yubikey\"]\n",
-        "dest": "cargo/vendor/apple-codesign",
-        "dest-filename": "Cargo.toml"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": null, \"files\": {}}",
-        "dest": "cargo/vendor/apple-codesign",
+        "contents": "{\"package\": \"9c9d5a1fd8af4a376cc33d7e816a13f8ce127d52101f5dbc8061fb595397bea0\", \"files\": {}}",
+        "dest": "cargo/vendor/apple-flat-package-0.20.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
-        "type": "shell",
-        "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/plume-apple-platform-rs-428b42f/apple-flat-package\" \"cargo/vendor/apple-flat-package\""
-        ]
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/apple-xar/apple-xar-0.20.0.crate",
+        "sha256": "9631e781df71ebd049d7b4988cdae88712324cb20eb127fd79026bc8f1335d93",
+        "dest": "cargo/vendor/apple-xar-0.20.0"
     },
     {
         "type": "inline",
-        "contents": "[package]\nname = \"apple-flat-package\"\nversion = \"0.20.0\"\nauthors = [\"Gregory Szorc <gregory.szorc@gmail.com>\"]\nedition = \"2021\"\nrust-version = \"1.81\"\nlicense = \"MPL-2.0\"\ndescription = \"Apple flat package (.pkg) format handling\"\nkeywords = [\"apple\", \"flat-package\", \"pkgbuild\", \"pkg\", \"productbuild\"]\nhomepage = \"https://github.com/indygreg/apple-platform-rs\"\nrepository = \"https://github.com/indygreg/apple-platform-rs.git\"\nreadme = \"README.md\"\n\n[dependencies]\nflate2 = \"1.0.35\"\nserde-xml-rs = \"0.6.0\"\nthiserror = \"2.0.3\"\n\n[dependencies.scroll]\nversion = \"0.12.0\"\nfeatures = [\"derive\"]\n\n[dependencies.serde]\nversion = \"1.0.215\"\nfeatures = [\"derive\"]\n\n[dependencies.apple-xar]\npath = \"../apple-xar\"\nversion = \"0.20.0\"\n\n[dependencies.cpio-archive]\npath = \"../cpio-archive\"\nversion = \"0.10.0\"\n",
-        "dest": "cargo/vendor/apple-flat-package",
-        "dest-filename": "Cargo.toml"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": null, \"files\": {}}",
-        "dest": "cargo/vendor/apple-flat-package",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "shell",
-        "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/plume-apple-platform-rs-428b42f/apple-xar\" \"cargo/vendor/apple-xar\""
-        ]
-    },
-    {
-        "type": "inline",
-        "contents": "[package]\nname = \"apple-xar\"\nversion = \"0.20.0\"\nauthors = [\"Gregory Szorc <gregory.szorc@gmail.com>\"]\nedition = \"2021\"\nrust-version = \"1.81\"\nlicense = \"MPL-2.0\"\ndescription = \"XAR archive reading and writing\"\nkeywords = [\"apple\", \"xar\"]\nhomepage = \"https://github.com/indygreg/apple-platform-rs\"\nrepository = \"https://github.com/indygreg/apple-platform-rs.git\"\nreadme = \"README.md\"\n\n[dependencies]\nbase64 = \"0.22.1\"\nbzip2 = \"0.4.4\"\ndigest = \"0.10.7\"\nlog = \"0.4.22\"\nmd-5 = \"0.10.6\"\nflate2 = \"1.0.35\"\nserde-xml-rs = \"0.6.0\"\nsha1 = \"0.10.6\"\nsha2 = \"0.10.8\"\nthiserror = \"2.0.3\"\nurl = \"2.5.4\"\nxml-rs = \"0.8.23\"\nx509-certificate = \"0.24.0\"\n\n[dependencies.bcder]\nversion = \"0.7.4\"\noptional = true\n\n[dependencies.chrono]\nversion = \"0.4.38\"\nfeatures = [\"serde\"]\n\n[dependencies.cryptographic-message-syntax]\nversion = \"0.27.0\"\noptional = true\n\n[dependencies.rand]\nversion = \"0.8.5\"\noptional = true\n\n[dependencies.reqwest]\nversion = \"0.12.9\"\ndefault-features = false\noptional = true\n\n[dependencies.scroll]\nversion = \"0.12.0\"\nfeatures = [\"derive\"]\n\n[dependencies.serde]\nversion = \"1.0.215\"\nfeatures = [\"derive\"]\n\n[dependencies.signature]\nversion = \"2.2.0\"\nfeatures = [\"std\"]\noptional = true\n\n[dependencies.xz2]\nversion = \"0.1.7\"\nfeatures = [\"static\"]\n\n[features]\ndefault = [\"signing\"]\nsigning = [\"dep:bcder\", \"dep:cryptographic-message-syntax\", \"dep:rand\", \"dep:reqwest\", \"dep:signature\"]\n",
-        "dest": "cargo/vendor/apple-xar",
-        "dest-filename": "Cargo.toml"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": null, \"files\": {}}",
-        "dest": "cargo/vendor/apple-xar",
+        "contents": "{\"package\": \"9631e781df71ebd049d7b4988cdae88712324cb20eb127fd79026bc8f1335d93\", \"files\": {}}",
+        "dest": "cargo/vendor/apple-xar-0.20.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -1928,21 +1889,16 @@
         "dest-filename": ".cargo-checksum.json"
     },
     {
-        "type": "shell",
-        "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/plume-apple-platform-rs-428b42f/cpio-archive\" \"cargo/vendor/cpio-archive\""
-        ]
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/cpio-archive/cpio-archive-0.10.0.crate",
+        "sha256": "f11d34b07689c21889fc89bd7cc885b3244b0157bbededf4a1c159832cd0df05",
+        "dest": "cargo/vendor/cpio-archive-0.10.0"
     },
     {
         "type": "inline",
-        "contents": "[package]\nname = \"cpio-archive\"\nversion = \"0.10.0\"\nauthors = [\"Gregory Szorc <gregory.szorc@gmail.com>\"]\nedition = \"2021\"\nlicense = \"MPL-2.0\"\ndescription = \"cpio archive reading and writing\"\nkeywords = [\"cpio\"]\nhomepage = \"https://github.com/indygreg/apple-platform-rs\"\nrepository = \"https://github.com/indygreg/apple-platform-rs.git\"\nreadme = \"README.md\"\n\n[dependencies]\nchrono = \"0.4.38\"\nis_executable = \"1.0.4\"\nsimple-file-manifest = \"0.11.0\"\nthiserror = \"2.0.3\"\n",
-        "dest": "cargo/vendor/cpio-archive",
-        "dest-filename": "Cargo.toml"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": null, \"files\": {}}",
-        "dest": "cargo/vendor/cpio-archive",
+        "contents": "{\"package\": \"f11d34b07689c21889fc89bd7cc885b3244b0157bbededf4a1c159832cd0df05\", \"files\": {}}",
+        "dest": "cargo/vendor/cpio-archive-0.10.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -12149,7 +12105,7 @@
     },
     {
         "type": "inline",
-        "contents": "[source.vendored-sources]\ndirectory = \"cargo/vendor\"\n\n[source.crates-io]\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/dadoum/android-loader\"]\ngit = \"https://github.com/dadoum/android-loader\"\nreplace-with = \"vendored-sources\"\nbranch = \"bigger_pages\"\n\n[source.\"https://github.com/plumeimpactor/plume-apple-platform-rs\"]\ngit = \"https://github.com/plumeimpactor/plume-apple-platform-rs\"\nreplace-with = \"vendored-sources\"\nrev = \"428b42f\"\n\n[source.\"https://github.com/jkcoxson/idevice\"]\ngit = \"https://github.com/jkcoxson/idevice\"\nreplace-with = \"vendored-sources\"\nrev = \"5171e34e3a236842af1160a84d955d037ddca3af\"\n",
+        "contents": "[source.vendored-sources]\ndirectory = \"cargo/vendor\"\n\n[source.crates-io]\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/dadoum/android-loader\"]\ngit = \"https://github.com/dadoum/android-loader\"\nreplace-with = \"vendored-sources\"\nbranch = \"bigger_pages\"\n\n[source.\"https://github.com/jkcoxson/idevice\"]\ngit = \"https://github.com/jkcoxson/idevice\"\nreplace-with = \"vendored-sources\"\nrev = \"5171e34e3a236842af1160a84d955d037ddca3af\"\n",
         "dest": "cargo",
         "dest-filename": "config"
     }
